@@ -7,3 +7,31 @@
 
 # ignore ds_store files
 .DS_Store
+
+# ignore large data files and archives
+*.zip
+*.tar.gz
+*.hdf5
+
+# ignore build artifacts
+language_model/runtime/server/x86/build/
+language_model/runtime/server/x86/fc_base/
+__MACOSX/
+
+# ignore large datasets (download separately)
+data/hdf5_data_final/
+data/speech_5gram/
+data/t15_copyTask.pkl
+data/t15_personalUse.pkl
+data/t15_pretrained_rnn_baseline/
+
+# ignore large model files (>50MB)
+saved_trained_model/*/checkpoint/best_checkpoint
+saved_trained_model/*/checkpoint/*.pkl
+
+# ignore jupyter checkpoints
+.ipynb_checkpoints/
+
+# ignore temporary files
+*.tmp
+*.log
